@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var obj = {
+        name : "huahua",
+        age  : 22,
+        sex  : "女",
+    }
+    Object.defineProperty(obj,"adds",{
+        value:"F",
+        configurable:true,
+        writable:true,
+        enumerable:true
+    })
+    console.log(obj);
+
+
+
+
+
+
+
+
+    // for (k in obj){
+    //     console.log(k,obj[k]);
+    // }
+
+    // console.log(Object.keys(obj));
+
+</script>
