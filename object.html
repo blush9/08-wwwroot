@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //Object.getPrototypeOf()返回参数对象的原型
+        //构造函数
+        var F = function () {  
+
+        }
+        var f = new F();
+        //对象f的原型是F.prototype
+        if(Object.getPrototypeOf(f)===F.prototype){
+            console.log("ok");
+        }else{
+            console.log("no");
+        }
+
+        //Object.prototype 的原型是null
+        var res = Object.getPrototypeOf(Object.prototype);
+        // console.log(res);//null
+
+        //函数的原型 Function.prototype
+        function proten() {  }
+        var obj = Object.getPrototypeOf(proten);
+        // console.log(obj);
+
+    // Object.setPrototypeOf方法为参数对象设置原型
+        var a = {};
+        var b = {x:1};
+        Object.setPrototypeOf(a,b);
+        var rese = Object.getPrototypeOf(a);
+        console.log(rese);
+</script>

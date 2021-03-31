@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function Person() {  
+        name:"hua"
+        age:2
+    }
+
+    Person.prototype.sex = "女";
+    Person.prototype.add = "中国";
+
+    function Asian() {  
+
+    }
+    Asian.prototype.location = "Asia";
+
+    function China() {  
+
+    }
+    //China继承Asian -> Person
+    China.prototype = new Asian();
+
+    //Asian继承person
+    Asian.prototype = new Person();
+
+    // 原型查找
+
+    //实例化 亚洲
+    var obj1 = new Asian();
+    console.log(obj1);
+
+    // 实力china
+    var obj2 = new China();
+    console.log(obj2);
+
+
+
+
+</script>
