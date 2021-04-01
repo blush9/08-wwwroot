@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // console.log(a);
+    // let a = 123;
+    //不可重复声明  不提升声明
+    // console.log(a);
+
+    // console.log(window.a)
+    // var a =12;  //let a=23
+    // console.log(window.a);
+
+    // const  Pi = 3.1415926;
+
+    // Pi = 3;//不能重新赋值  不能改变
+    // console.log(Pi);
+    
+
+    // const oo; //不能只声明不赋值
+    // console.log(oo);
+
+    // if (true){
+    //     const max = 3;
+    //     console.log(max);
+    // }
+
+
+    //解构赋值
+        // let [a,b,c] = [11,23,44];
+        // console.log(a);
+        // console.log(b);
+        // console.log(c);
+
+
+    //对象赋值
+    // let obj = {
+    //     name:"华振",
+    //     age:12
+    // }
+
+    //使用与对象属性名一致的变量名
+
+    // let {name,age} = obj;
+    // console.log(name,age);
+
+    // //使用别名
+
+    // let {name:n,age:s} = obj;
+    // console.log(n,s);
+
+
+
+    //模板字符串
+    let name = "hua";
+    let age = 12;
+    let age2 = 23;
+
+    //使用 反引号 ``
+    let str = `姓名：${name},年龄：${age}`;
+    console.log(str);
+
+    let str2 = `age+age2:${age+age2}`;
+    console.log(str2);//35
+
+
+    //es字符串
+        //indexOf  LastIndexOf
+        var str1 = "Holle world";
+        console.log(str1.indexOf("o"));
+        console.log(str1.lastIndexOf("o"));
+
+        /*includes()  返回布尔 是否找到了参数字符串
+        startsWith()  返回布尔  字符串是否在原字符串头部
+        endsWith()    返回布尔  字符串是否在原字符串尾部
+        */
+        let s = "hello world"
+        console.log(s.startsWith('world',6));
+        console.log(s.endsWith("world",5));
+        console.log(s.includes("hello",0));
+
+        //repeat()  表示将原字符串重复n次
+        var se = 'llo'.repeat(2);
+        console.log(se);
+
+        //padStart() 用于头部补全 padEnd()  用于尾部补全
+        var pa = 'llo'.padStart(2,'end');
+        console.log(pa);
+        //trimStart()消除字符串头部的空格
+        //trimEnd()消除尾部的空格   
+
+</script> 
