@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>11</div>
+    <div>11</div>
+</body>
+</html>
+<script>
+    //解构赋值默认值
+
+    /*
+    function foo({x,y = 5}) {
+        console.log(x,y)
+    }
+    foo() //报错
+    foo({});//undefined 5
+    foo({x:1}) //1 5
+    foo({x:2,y:9})  //2 9
+    */
+
+//    function f({x = 1,y}) {
+//        return [x,y];
+//    }
+//    f();
+
+    //rest 参数
+    /*
+        function add(...ags) {
+    //        console.log(ags)
+         return [ags];
+        }
+        console.log(add(11,22,33));
+
+
+        function roo(a,b,...asd) {
+            return [asd]
+        }
+        console.log(roo(23,45,32,14,34))
+    */
+
+    //作用域
+        /*
+            let x=1;
+            function f(y=x) {
+                let x=2;
+                console.log(y)
+            }
+            f();
+        */
+
+
+    //箭头函数
+        /*
+        var f = v => v;
+
+        //等同于
+        var f = function (v) {
+            return v;
+        }
+
+        var num = (num1,num2) => num1+num2;
+        console.log(num(12,12));//24
+
+        var str = (str1,str2) => {return str1+str2}
+        console.log(str("hel","lo"))
+        */
+
+
+        //     set
+
+//    const s = new Set();
+//    [2,3,4,5,5,2,2].forEach(x => s.add(x));
+//    for(let i of s){
+//        console.log(i)
+//    }
+
+/*
+    const set  = new Set([1,2,3,4,4,4]);
+    console.log([...set])  //[1,2,3,4]
+
+    const items = new Set([1,2,3,4,3,4,3,2]);
+    console.log(items.size);
+
+    const set = new Set(document.querySelectorAll('div'));
+    console.log(set.size);//div个数
+*/
+//    const set = new Set();
+//    document
+//        .querySelectorAll('div')
+//        .forEach(div => set.add(div));
+//    console.log(set.size)
+//
+
+//  var f = function () {
+//      console.log(1)
+//  }
+//  function f() {
+//      console.log(2)
+//  }
+//  f()
+
+
+//    function func() {
+//        console.log(num)
+//        var num = 1;
+//    }
+//    func()
+
+//    a=1;
+//    var a;
+//    console.log(a)
+
+//    var num = 1;
+//    function func() {
+//        var num = 2;
+//        return num;
+//    }
+//    console.log(func())
+
+//    function fun(n,o) {
+//        console.log(o)
+//        return {
+//            fun:function (m) {
+//                return fun(m,n)
+//            }
+//        }
+//    }
+//    var a = fun(0)
+//    a.fun(1)
+//    a.fun(2)
+//    a.fun(3)
+
+//    function a() {
+//        console.log(this)
+//    }
+//    a();
+
+//    function a() {
+//        var user = "XXX";
+//        console.log(this.user)
+//        console.log(this)
+//    }
+//    a();
+
+//    function  createCar(color,wheel) {
+//        var obj = new Object;
+//        obj.color = color;
+//        obj.wheel = wheel;
+//        return obj;
+//    }
+//    var cat1 = createCar("红色",'4')
+//    console.log(cat1.color)
+
+
+    sayHello();
+    function sayHello() {
+        console.log("Hello")
+    }
+
+
+
+</script>
