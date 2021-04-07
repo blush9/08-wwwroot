@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    const  obj = {
+        name:"hua",
+        age:12,
+
+        get age(){
+            console.log(1111);
+        },
+        set age(v){
+            console.log("新值",v);
+        }
+    }
+    obj.age;      //读操作  触发get方法
+    obj.age = 23    //写操作   触发set方法
+</script>

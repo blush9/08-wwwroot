@@ -10,9 +10,71 @@
 </body>
 </html>
 <script>
+    /*
     let name = "张三";
     let age = 55;
     let obj1 = {name,age};
     console.log(obj1.name);
     console.log(obj1.age);
-</script>
+
+
+    //对象方法
+    let obj0 = {
+        say:function(){
+            console.log(1234);
+        }
+    }
+    let obj2 = {
+        say(){
+            console.log(124);
+        }
+    }
+    obj0.say();
+    obj2.say();
+
+    obj2 = {
+        ['h'+'ua'](){
+            return "华振";
+        }
+    }
+
+    obj2['a'+"b"] = 123;
+    console.log(obj2);
+    */
+
+
+    /*
+    //扩展符
+    let person = {
+        name :"zhang",
+        age:13,
+        sex:'m'
+    }
+    console.log(person);
+
+    //将对象person中的所有可枚举属性拷贝到p1中
+    //
+    let p1 = {...person}
+    console.log(p1);
+
+    let arr1 = [11,11,231,12];
+    let are = {...arr1};
+    console.log(are);
+    */
+
+    //get  set 
+    let obj1 = {
+        name:"zhang",
+        age:11,
+        get name(){
+            console.log("正在读取name属性")
+        },
+
+        set name(v){
+            console.log("新值为：",v)
+        }
+    }
+
+    obj1.name
+    obj1.name = "lisi";
+    </script>
