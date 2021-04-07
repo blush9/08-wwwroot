@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    /*
+    function abc() {  
+        let a = 1;
+        let b=2;
+        return a+b;
+    }
+
+    console.log(abc());
+
+
+    //匿名函数
+    var fun1 = function(){
+        console.log(12);
+    }
+    fun1();
+
+    //构造函数
+    var fun2 = new Function('x','y',"return x+y");
+    var num = fun2(1,2);
+    console.log(num);
+
+    //函数参数
+        //值传递
+    function add(num) {  
+        num++
+        
+    }
+    var a=123;
+    add(a);
+    console.log(a);
+        //引用传递
+    function ads(ber) {  
+        ber[0]++
+    }
+    var arr = [11]
+    ads(arr)
+    console.log(arr);
+
+    //获取函数参数  arguments
+    function info(){
+        console.log(arguments);
+        return arguments[0] + arguments[1];
+    }
+    var number = info(123,234);
+    console.log(number)
+
+    //函数作为返回值
+    function test() {  
+        function test2(a,b) {  
+            console.log(123)
+            console.log(a+b)
+        }
+        return test2;
+    }
+    test()(1,2);
+
+    */
+
+
+/*
+    //作为参数  
+    function test3(aad) {  
+        console.log(111)
+        var a = 11;
+        var b = 22;
+        aad(a,b);
+    }
+    function test4(add1,add2) {  
+        console.log(add1+add2);
+    }
+    test3(test4);
+
+    function res1(q) {  
+        console.log(10);
+        var c=1;
+        var v = 2;
+        q(c,v);
+    }
+    function rest2(cc,vv){
+        console.log(cc+vv);
+    }
+    res1(rest2);
+
+    //立即执行函数
+    (function () {  }())
+    (function as() {  
+        console.log(1111)
+    }())
+    */
+
+
+    //函数属性和方法
+    function ob(a,c,v) {  
+        name:"hua";
+        age:12;
+
+    }
+    console.log(ob.name);
+    console.log(ob.length)
+    console.log(ob.toString())
+
+    function A() {  
+        this.name = 'tmo';
+        this.age = 12;
+        this.eat = function(){
+            alert("apple");
+        }
+    }
+    A.prototype = {
+        num:12,
+        drink(){
+            alert('juice');
+        }
+    }
+    var a = new A();
+    console.log(a);
+</script>
