@@ -6,10 +6,28 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>距寒假还有：</h3>
+    
 </body>
 </html>
 <script>
-    let arr1 = [11,33,44,11,66,77,44];
-    console.log(arr1.prototype);
+    // 1 实例化 XHR
+    let  xhr = new XMLHttpRequest();
+    //2 监听状态
+    xhr.onreadystatechange = function () {  
+        if(xhr.readyState==4&& xhr.status==200){
+            // console.log(xhr.responseText);//查看
+
+            //接受服务器响应的数据
+            let json_str = xhr.responseText;
+                //将json字符串转化为 js对象
+                let obj = json.parse(json_str);
+                console.log(obj);
+        }
+    }
+
+    //3 打开连接 
+    xhr.open('get','test.php');
+
+    //4 发送请求
+    xhr.send();
 </script>
