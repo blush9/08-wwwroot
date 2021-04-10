@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // let it = makeItertor(['a','b']);
+    // console.log(it.next());
+
+    let arr1 = [11,22,33];
+    console.log(Array.prototype)
+    console.log(Set.prototype)
+    console.log(Map.prototype)
+
+    let it = arr1[Symbol.iterator]()
+    console.log(it.next());
+    console.log(it.next());
+    console.log(it.next());
+    console.log(it.next());
+</script>

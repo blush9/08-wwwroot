@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //添加一个属性
+        let person = {
+            name:"ma",
+            age:1
+        }
+        person.sex = "nv";//向对象中添加属性
+
+    //通过 Object.defineProperty 添加属性
+        Object.defineProperty(person,"add",{
+            value:'dong',
+            writable:true,
+            enumerable:false,
+            configurable:true
+        })
+        console.log(person);
+
+    //删除一个属性
+        delete person.age;
+        console.log(person);
+
+    //检测属性是否存在对象中  in
+        console.log('name' in person) //true
+        console.log('sss' in person); //false
+
+    //枚举对象
+        for(k in person){
+            console.log(k);//属性名
+        }
+
+        //object.keys()枚举‘可枚举的属性’的属性
+        console.log(Object.keys(person))
+
+    //自定义属性 
+        let obj = {
+            name:'ta',
+            age:23
+        }
+        //向obj中添加一个属性  sex
+        Object.defineProperty(obj,'from',{
+            value:'bei',
+        })
+
+        console.log('name' in obj);  //true
+        console.log('from' in obj);  //true
+        console.log('xx' in obj);  //false
+
+    //对象 get  set 方法 
+        const p1 = {
+            name:'sa',
+            age:44
+        }
+        Object.defineProperty(p1,'name',{
+            //name属性的get方法
+            get(){
+                return 'xxx';
+            },
+            //name 属性的set方法
+            set(v){
+                console.log('新值',v)
+            }
+        })
+        p1.name = "da"; 
+        console.log(p1.name);
+        
+        // console.log(p1);
+
+    //类的get  set 
+        class Person{
+            constructor(name='noname',age=0){
+                this.name = name
+                this.age = age
+            }
+            //name属性的 get方法
+            get name(){
+                console.log("访问了name属性");
+            }
+            set name(v){
+                console.log('修改了name属性');
+            }
+        }
+
+        const p2 = new Person();
+        p2.name
+        p2.name = 'lisi'
+        console.log(p2);
+</script>

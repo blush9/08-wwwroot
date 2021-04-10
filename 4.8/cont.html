@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let arr1 = [1,2,3,4]
+    arr1.forEach(function (v,k) {  
+        console.log(k,v)
+    })
+
+    for(v of arr1){
+        console.log(v)
+    }
+
+    let s1 = new Set(['aa','bb','cc']);
+    for(v of s1){
+        console.log(v);
+    }
+    console.log(s1);
+
+    //定义一个map
+    const obj1 = {
+        name:'da',
+        age:44
+    }
+    const obj2 = {
+        name:'wa',
+        age:55
+    }
+    let mm = new Map();
+    mm.set(obj1,'大');
+    mm.set(obj2,'哇');
+    console.log(mm);
+
+    console.log(333333);
+    for(va of mm){
+        console.log(va);
+    }
+</script>

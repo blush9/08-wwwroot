@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+//
+
+    let obj = {
+        name:'aad',
+        age:32
+    }
+    Object.defineProperty(obj,'sex',{
+        value : "nan",
+        configurable:false,
+        enumerable:true,
+        writable:true,
+    })
+    if(delete obj.sex){
+        console.log('删除成功');
+    }else{
+        console.log('无权限，删除失败');
+    }
+    console.log(obj);
+</script>
