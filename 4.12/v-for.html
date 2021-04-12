@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <ul>
+        <li v-for="item in list">{{item.age}}</li>
+    </ul>
+</div>
+
+    <!--循环 v-for -->
+    <div id="app3">
+        <ol>
+            <li v-for="todo in todos">
+                {{ todo.text}}
+            </li>
+        </ol>
+    </div>
+</body>
+</html>
+<script>
+
+    new Vue({
+        el:'#app',
+        data:{
+            list:[{name:'hua',age:12},{name:'zhen',age:33}]
+        }
+    })
+
+    /*********************循环 v-for *******
+     *  可以绑定数组的数据来渲染一个项目列表******************/
+    var app3 = new Vue({
+        el:'#app3',
+        data:{
+            todos:[
+                {text:'学习 java'},
+                {text:'学习 Vue'},
+                {text:'高薪'}
+            ]
+        }
+    })
+</script>

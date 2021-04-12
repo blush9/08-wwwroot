@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <button>点击1</button>
+    <button v-on:click="down">点击2</button>
+</div>
+</body>
+</html>
+<script src="../vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        methods:{
+            down(){
+                alert(123);
+            }
+        }
+    })
+
+
+//    document.getElementsByTagName("button")[0].addEventListener('click',function () {
+//        alert(1234)
+//    })
+</script>

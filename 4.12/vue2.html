@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <span v-bind:title = 'msg'>
+            鼠标悬停查看
+        </span>
+    </div>
+
+    <!--控制元素是否显示 true false-->
+    <div id="app2">
+        <p v-if="seen">现在看到了</p>
+    </div>
+
+    <!--循环 v-for -->
+    <div id="app3">
+        <ol>
+            <li v-for="todo in todos">
+                {{ todo.text}}
+            </li>
+        </ol>
+    </div>
+</body>
+</html>
+<script>
+    var app = new Vue({
+        el:'#app',
+        data:{
+            msg:'页面加载'+new Date().toLocaleString()
+        }
+    })
+    /*****************控制元素是否显示 true false ********************/
+    var app2 = new Vue({
+        el:'#app2',
+        data:{
+            seen:false
+        }
+    });
+
+
+    /*********************循环 v-for *******
+     *  可以绑定数组的数据来渲染一个项目列表******************/
+    var app3 = new Vue({
+        el:'#app3',
+        data:{
+            todos:[
+                {text:'学习 java'},
+                {text:'学习 Vue'},
+                {text:'高薪'}
+            ]
+        }
+    })
+</script>
