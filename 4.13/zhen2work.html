@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+    <script src="../4.12/axios.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        用户名：
+        <input v-model='text'>
+        <span>{{msg}}</span>
+    </div>
+</body>
+</html>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            text:'',
+            msg:"请输入用户名"
+        },
+        watch:{
+            text(nv,ol){
+                this.msg = "输入中..";
+                let ogd = this.nv;
+                let self = this;
+                //获取接口内容
+                axios.get("http://vue.api.comcto.com/api/checkname.php?name='ogd'").then(function(res){
+                    if(res.data.msg=="ok"){
+                        self.msg = "ok";
+                    }else{
+                        self.msg = "用户名已存在";    
+                    }
+                })
+            }
+        }
+    })
+</script>
