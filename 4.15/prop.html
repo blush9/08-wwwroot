@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <text-hh v-bind:asa="hi"></text-hh>
+    </div>
+</body>
+</html>
+<script>
+    // 组件传值
+    Vue.component('text-hh',{
+        props:['asa'],
+        template:"<h3>{{asa}}</h3>"
+    })
+
+    new Vue({
+        el:"#app",
+        data:{
+            hi:"hi peny"
+        }
+    })
+</script>
